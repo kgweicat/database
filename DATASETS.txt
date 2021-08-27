@@ -1,0 +1,38 @@
+names of datasets:
+Airbnb and Zillow
+Short and Long-term housing rental
+in Austin, Boston, Los Angeles
+
+URLs to download site:
+http://insideairbnb.com/get-the-data.html
+https://www.zillow.com/research/data/
+
+Interesting entities and attributes:
+
+Zillow Long-term Rental, Home Value, Inventory data:
+rental price has increased 2-3% every year independent on geography
+Rental price: Boston > LA >> Austin
+The inventory fluctuates more than +- 10 percent from month to month which is large.
+The Home value does not always increase over time (even in long-term) which contrasts
+to the conventional belief that the real-estate price always goes up (due to inflation)
+
+Airbnb data:
+Avaibility in Austin is either at very low end (close to 0) or at a very high end (close to 360).
+Most of the listing in Austin offer an entire home, whereas Boston and LA listings has higher proportion of private room.
+For all cities, prices fluctuates a lot even within the same neighborhood
+Some places provide over 3 years for renting on Airbnb which is unexpected given our familiarity with Airbnb.
+
+Insights to gain from exploring datasets:
+Discover relationship between availability of listing with price - how the supply and demand play out.
+See the rate at which the rental prices are increasing in different cities and test our real-life hypothesis (for example: there are a lot of people moving to Austin in recent years.Does that lead to rental prices increasing at a higher rate due to increased demand?)
+See if there are decisive factors that affect the rental price and if those factors are the same across three different geography.
+See if there are any area-specific behaviors/preferences of the hosts in terms of listing, pricing, policy
+See if the effect of social-proof (reviews) affects the short and long-term pricing, availability of the housing.
+See how the micro-level data (Airbnb, short-term oriented) can help us better understand or find its correlation on long-term trend (Zillow) 
+
+Necessary Transformation for cross-join dataset:
+We don't necessary need to transform the tables. We can cross join the data from Airbnb
+and Zillow using the Date (year or month). The Airbnb.calendar table has the date (linked to Zillow)
+and listing_id which can further links to any other tables from Airbnb dataset.
+After all, this join based on month/year makes sense because our objective is about time-related 
+short/long-term price of housing.
